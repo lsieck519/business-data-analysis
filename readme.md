@@ -1,12 +1,11 @@
 # Business Data Analysis
 
 ## User Story
-- As a data analyst
+- As a data analyst 
     - I want
     - So that 
 
 ## Acceptance Criteria
-
 ```
 
 ```
