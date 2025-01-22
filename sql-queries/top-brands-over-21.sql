@@ -1,0 +1,2 @@
+-- Closed-ended question: 
+-- What are the top 5 brands by receipts scanned among users 21 and over?
