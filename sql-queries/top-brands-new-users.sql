@@ -1,0 +1,2 @@
+-- Closed-ended question: 
+-- What are the top 5 brands by sales among users that have had their account for at least six months?
