@@ -31,7 +31,7 @@ brands_cte AS (
 )
 
 -- Joining CTEs to get associated brands with users in transactions table by barcode
-SELECT DISTINCT
+SELECT
     u.ID AS user_in_transactions,
     t.USER_ID AS user_with_barcode_in_products,
     b.brand,
