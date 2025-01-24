@@ -31,6 +31,14 @@ View the interactive Tableau Dashboard here:
 [Business Data Summary - Laura Sieck](https://public.tableau.com/views/BusinessDataSummary/UserGrowth?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
+## Demo
+
+
+https://github.com/user-attachments/assets/9e9bc473-db0c-4346-bd5c-ac95fbed4e94
+
+
+
+---
 
 ## Questions?
 
