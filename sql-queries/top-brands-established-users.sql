@@ -1,31 +1,30 @@
 -- Closed-ended question: 
 -- What are the top 5 brands by sales among users that have had their account for at least six months?
 
+-- I thought about getting the top brands by sale $ amount but still a bit unclear on what the sales and quantity columns represent.
+-- I'm assuming the barcode linking products and transactions is the barcode for the receipt itself and not specific products.
+-- Presently, I am working under the assumption that quantity and sale refer to the entire receipt and not individual products.
+-- This would be a situation where I send a quick Slack message for clarification!
+-- Considering the above, I'll get the top brands by sales count instead
 
-with 
-
--- get IDs of users that have had their account for at least six months
-users_cte as (
+WITH 
+users_cte AS (
     SELECT ID  
     FROM Users 
     WHERE strftime('%Y-%m-%d', CREATED_DATE) < date('now', '-6 months')
 ),
-
--- get barcodes only associated with users that have had their account for at least six months
-transactions_cte as (
-    SELECT t.barcode
+transactions_cte AS (
+    SELECT DISTINCT t.barcode
     FROM Transactions t
-    WHERE t.user_id IN (SELECT id FROM users_cte)
-    AND t.barcode IS NOT NULL
+    JOIN users_cte u ON t.user_id = u.ID
+    WHERE t.barcode IS NOT NULL AND t.barcode != ''
 )
-
--- get top 5 brands by sales among users that have had their account for at least six months
 SELECT 
     p.brand,
-    count(p.brand) as count
+    COUNT(p.brand) AS count
 FROM Products p
-WHERE p.barcode in (SELECT barcode FROM transactions_cte)
-AND p.brand != ""
+JOIN transactions_cte t ON p.barcode = t.barcode
+WHERE p.brand IS NOT NULL AND p.brand != ''
 GROUP BY p.brand
 ORDER BY count DESC 
 LIMIT 5;

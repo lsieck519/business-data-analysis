@@ -52,7 +52,7 @@ def clean_data(df, table_name):
         # Handling barcode column here since it is a field in both Transactions and Products tables
         if 'BARCODE' in df.columns:
             df['BARCODE'] = pd.to_numeric(df['BARCODE'], errors='coerce')
-            df['BARCODE'] = df['BARCODE'].fillna(0).astype('Int64') 
+            df['BARCODE'] = df['BARCODE'].astype('Int64')
         
         # Handle users table
         if table_name == "users": 
@@ -155,7 +155,8 @@ def main():
     query_files = [
         "fetch-growth-by-year.sql",
         "top-brands-established-users.sql",
-        "top-brands-over-21.sql"
+        "top-brands-over-21.sql",
+        "users-in-transactions-table.sql",
     ]
 
     for query_file in query_files:

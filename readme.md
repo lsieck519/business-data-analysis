@@ -2,9 +2,7 @@
 
 ## User Story
 
-As a data analyst,  
-I want to analyze and interpret a specific data set,  
-So that I can effectively communicate insights and actionable recommendations to stakeholders and demonstrate my data analysis skills.
+As a data analyst, I want to analyze and interpret a specific data set so that I can effectively communicate insights and actionable recommendations to stakeholders and demonstrate my data analysis skills.
 
 ---
 
@@ -16,8 +14,7 @@ So that I can effectively communicate insights and actionable recommendations to
 
 ### 2. **SQL Queries**
 - **Objective:** Use SQL to extract valuable insights from the data.
-- **Result:** [SQL Query Summary](/sql-queries/sql-summary.md)
-
+- **Result:** 
     - [Fetch Growth by Year](sql-queries/fetch-growth-by-year.sql)
     - [Top Brands by Established Users](sql-queries/top-brands-established-users.sql)
     - [Top Brands for Users Over 21](sql-queries/top-brands-over-21.sql)
@@ -31,7 +28,7 @@ So that I can effectively communicate insights and actionable recommendations to
 ## Data Visualization
 
 View the interactive Tableau Dashboard here:  
-[Tableau Dashboard - Laura Sieck](https://public.tableau.com/app/profile/laura.sieck/vizzes)
+[Business Data Summary - Laura Sieck](https://public.tableau.com/views/BusinessDataSummary/UserGrowth?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
